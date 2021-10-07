@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="可怜人的自我救赎">
-<meta property="og:type" content="website">
-<meta property="og:title" content="images">
-<meta property="og:url" content="http://example.com/images/index.html">
+  <meta name="description" content="写在前面国庆在家里实在是无聊透顶，在写算法题的时候发现一个事情，c++的std::sort是不支持链式数据结构的，所以就想着能不能做一个给单向链表排序的排序算法。所有相关代码被放在 GITEE:dxyinme&#x2F;Vsort 具体要怎么做我们先设计了一个单链表结构VListNode如下： 12345template&lt;typename T&gt;struct VListNode &amp;#123;  T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序相关的二三事">
+<meta property="og:url" content="http://example.com/2021/10/07/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E6%8E%92%E5%BA%8F%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/index.html">
 <meta property="og:site_name" content="dxy的耻辱柱">
-<meta property="og:description" content="可怜人的自我救赎">
+<meta property="og:description" content="写在前面国庆在家里实在是无聊透顶，在写算法题的时候发现一个事情，c++的std::sort是不支持链式数据结构的，所以就想着能不能做一个给单向链表排序的排序算法。所有相关代码被放在 GITEE:dxyinme&#x2F;Vsort 具体要怎么做我们先设计了一个单链表结构VListNode如下： 12345template&lt;typename T&gt;struct VListNode &amp;#123;  T">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-08T04:39:14.000Z">
-<meta property="article:modified_time" content="2021-08-15T12:13:47.081Z">
+<meta property="article:published_time" content="2021-10-07T05:58:01.000Z">
+<meta property="article:modified_time" content="2021-10-07T12:33:38.095Z">
 <meta property="article:author" content="dxyinme">
+<meta property="article:tag" content="技术相关">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/images/">
+<link rel="canonical" href="http://example.com/2021/10/07/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E6%8E%92%E5%BA%8F%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/">
 
 
 <script id="page-configurations">
@@ -40,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>images | dxy的耻辱柱
-</title>
+  <title>排序相关的二三事 | dxy的耻辱柱</title>
   
 
 
@@ -163,43 +163,93 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/07/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E6%8E%92%E5%BA%8F%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dxyinme">
+      <meta itemprop="description" content="可怜人的自我救赎">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dxy的耻辱柱">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          排序相关的二三事
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">images
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-10-07 13:58:01 / 修改时间：20:33:38" itemprop="dateCreated datePublished" datetime="2021-10-07T13:58:01+08:00">2021-10-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>国庆在家里实在是无聊透顶，在写算法题的时候发现一个事情，c++的std::sort是不支持链式数据结构的，所以就想着能不能做一个给单向链表排序的排序算法。所有相关代码被放在 <a target="_blank" rel="noopener" href="https://gitee.com/dxyinme/Vsort">GITEE:dxyinme/Vsort</a></p>
+<h2 id="具体要怎么做"><a href="#具体要怎么做" class="headerlink" title="具体要怎么做"></a>具体要怎么做</h2><p>我们先设计了一个单链表结构<code>VListNode</code>如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">VListNode</span> &#123;</span></span><br><span class="line">  T val;</span><br><span class="line">  VListNode *nxt;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>如果我们要合并两个有序的单链表，那么我们就只需要每次选择一个链表里面最大的元素就可以。这个很简单，详见 <a target="_blank" rel="noopener" href="https://gitee.com/dxyinme/Vsort/blob/master/v_sort_list.h#L59">Vsort::MergeList</a>，可以合并两个有序单向链表的话，我们就可以做一个归并排序，每次<code>O(n)</code>选取整个链表的中点，将整个链表从中点切成两个链表，切完之后，递归继续，直到只剩下一个元素为止。</p>
+<p>我们对于</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>单只有链表排序肯定不够，而且性能也普通的std::sort对vector排序比差了不少，是否可以进行一个多线程的优化。<br>整个多线程排序分成三个部分：</p>
+<ol>
+<li>我们将整个待排序容器切成若干部分 (同步)</li>
+<li>每个部分排序 (异步)</li>
+<li>合并每个已经排序的部分 (异步)</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/" rel="tag"># 技术相关</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/12/%E6%96%87/%E6%9A%97%E9%9D%A2%E5%9F%8E%E5%B8%82%E7%B3%BB%E5%88%97/" rel="prev" title="暗面城市系列">
+      <i class="fa fa-chevron-left"></i> 暗面城市系列
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -250,6 +300,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E8%A6%81%E6%80%8E%E4%B9%88%E5%81%9A"><span class="nav-number">2.</span> <span class="nav-text">具体要怎么做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">优化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
