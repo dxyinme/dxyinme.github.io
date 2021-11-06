@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/23/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/23/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/LIBPNG%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -181,7 +181,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/10/23/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F%E5%84%BF/" class="post-title-link" itemprop="url">一个图像处理的小玩意儿</a>
+            <a href="/2021/10/23/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/LIBPNG%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">LIBPNG学习笔记</a>
         </h2>
 
         <div class="post-meta">
@@ -190,10 +190,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-23 15:20:39 / 修改时间：15:27:06" itemprop="dateCreated datePublished" datetime="2021-10-23T15:20:39+08:00">2021-10-23</time>
+              <time title="创建时间：2021-10-23 15:20:39" itemprop="dateCreated datePublished" datetime="2021-10-23T15:20:39+08:00">2021-10-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-06 11:48:21" itemprop="dateModified" datetime="2021-11-06T11:48:21+08:00">2021-11-06</time>
+              </span>
 
           
 
@@ -206,10 +212,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>最近开始整一些图像处理相关的工具啊啥的，这里就用来记录一下图像处理相关的一些内容</p>
-<h2 id="关于opencv-python"><a href="#关于opencv-python" class="headerlink" title="关于opencv-python"></a>关于opencv-python</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python3-pip</span><br><span class="line">pip3 install cmake <span class="comment"># 不加这个会build不过</span></span><br><span class="line">pip3 install opencv-python -i https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
+          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>一些libpng相关的内容</p>
+<h2 id="一些用到的库"><a href="#一些用到的库" class="headerlink" title="一些用到的库"></a>一些用到的库</h2><h3 id="安装PIL"><a href="#安装PIL" class="headerlink" title="安装PIL"></a>安装PIL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python3-pip</span><br><span class="line">pip3 install pillow -i https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
+<h3 id="libpng安装和使用"><a href="#libpng安装和使用" class="headerlink" title="libpng安装和使用"></a>libpng安装和使用</h3><p>下载地址 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/libpng/files/">https://sourceforge.net/projects/libpng/files/</a><br>解压之后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make check</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>libpng好像还需要依赖zlib</p>
+<p>zlib 走这个下载 <a target="_blank" rel="noopener" href="https://zlib.net/">https://zlib.net/</a><br>然后基本也是跟libpng一样的安装方式。</p>
+<p>就装好了，要用的话就在cmake链接里面加一下就行</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.1</span>)</span><br><span class="line"><span class="keyword">project</span>(uxpng)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">14</span>)</span><br><span class="line"><span class="keyword">add_executable</span>(uxpng main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(uxpng png)</span><br></pre></td></tr></table></figure>
 
-
+<h2 id="jpg2png"><a href="#jpg2png" class="headerlink" title="jpg2png"></a>jpg2png</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment"># python3</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span> :</span><br><span class="line">	pg = <span class="string">&#x27;&#123;&#125;.jpg&#x27;</span>.<span class="built_in">format</span>(sys.argv[<span class="number">1</span>])</span><br><span class="line">	img = Image.<span class="built_in">open</span>(pg)</span><br><span class="line">	img.save(<span class="string">&#x27;&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(sys.argv[<span class="number">1</span>]))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这是一个把jpg文件转换成png文件的脚本，为啥要这样呢，主要是因为这里主要是在用libpng玩东西，所以有了这么个脚本</p>
+<h2 id="PNG基础"><a href="#PNG基础" class="headerlink" title="PNG基础"></a>PNG基础</h2><p><a target="_blank" rel="noopener" href="https://gitee.com/dxyinme/uxpng">https://gitee.com/dxyinme/uxpng</a> 这里是我学习libpng相关的一些操作和实践</p>
+<h3 id="图像类型"><a href="#图像类型" class="headerlink" title="图像类型"></a>图像类型</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//摘抄自libpng的定义</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_MASK_PALETTE    1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_MASK_COLOR      2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_MASK_ALPHA      4</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_TYPE_GRAY 0   <span class="comment">// 灰度图</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_TYPE_PALETTE  (PNG_COLOR_MASK_COLOR | PNG_COLOR_MASK_PALETTE) <span class="comment">// 调色板（我也不知道啥玩意儿）</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_TYPE_RGB        (PNG_COLOR_MASK_COLOR) <span class="comment">// RGB图</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_TYPE_RGB_ALPHA  (PNG_COLOR_MASK_COLOR | PNG_COLOR_MASK_ALPHA) <span class="comment">// RGB+透明度图</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PNG_COLOR_TYPE_GRAY_ALPHA (PNG_COLOR_MASK_ALPHA) <span class="comment">// 灰度+透明度图</span></span></span><br></pre></td></tr></table></figure>
+<p>先不考虑调色板的话，PNG一共有4种格式。抛开固定格式，整个图的存储方式大致是一个二维的矩阵，矩阵的每个元素可以被看成是一个像素, 每个像素按照自己的图像类型，以某些特定的方式排列。例如RGB类型的图像，他的排列方式就是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|B|G|R| <span class="comment">// 通道数为3</span></span><br></pre></td></tr></table></figure>
+<p>如果是RGB-alpha(有透明通道)的图像，他的排序方式就是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B|G|R|A| <span class="comment">// 通道数为4</span></span><br></pre></td></tr></table></figure>
+<p>灰度图和灰度透明图只有一个（两个）通道，用来表示每个像素的灰度和透明度。</p>
+<h2 id="图像的读写"><a href="#图像的读写" class="headerlink" title="图像的读写"></a>图像的读写</h2><h3 id="读取png图像"><a href="#读取png图像" class="headerlink" title="读取png图像"></a>读取png图像</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fp = <span class="built_in">fopen</span>(img_path, <span class="string">&quot;rb&quot;</span>); <span class="comment">// 打开文件</span></span><br><span class="line">png_ptr  = <span class="built_in">png_create_read_struct</span>(PNG_LIBPNG_VER_STRING, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>); <span class="comment">// 初始化png读指针</span></span><br><span class="line">info_ptr = <span class="built_in">png_create_info_struct</span>(png_ptr); <span class="comment">// 初始化内容指针</span></span><br><span class="line"><span class="built_in">png_init_io</span>(png_ptr, fp); <span class="comment">// 初始化io指针</span></span><br><span class="line"><span class="built_in">png_read_png</span>(png_ptr, info_ptr, PNG_TRANSFORM_EXPAND, <span class="literal">nullptr</span>); <span class="comment">// 读取png</span></span><br></pre></td></tr></table></figure>
+<p>首先，先获取图像的基本信息</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> channels, color_type, bit_depth, width, height;</span><br><span class="line">channels = <span class="built_in">png_get_channels</span>(png_ptr, info_ptr);</span><br><span class="line">color_type = <span class="built_in">png_get_color_type</span>(png_ptr, info_ptr);</span><br><span class="line">bit_depth = <span class="built_in">png_get_bit_depth</span>(png_ptr, info_ptr);</span><br><span class="line">width = <span class="built_in">png_get_image_width</span>(png_ptr, info_ptr);</span><br><span class="line">height  = <span class="built_in">png_get_image_height</span>(png_ptr, info_ptr);</span><br></pre></td></tr></table></figure>
+<p>其次再获取整个图像矩阵</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> row_pointers = <span class="built_in">png_get_rows</span>(png_ptr, info_ptr);</span><br></pre></td></tr></table></figure>
+<p>这里的图像矩阵的高是height，宽是 channels * width 读取像素的时候需要获取连续channels个元素。</p>
+<h3 id="输出png图像"><a href="#输出png图像" class="headerlink" title="输出png图像"></a>输出png图像</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">png_ptr = <span class="built_in">png_create_write_struct</span>(PNG_LIBPNG_VER_STRING, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>, <span class="literal">nullptr</span>); <span class="comment">// 这里要设置成write_struct</span></span><br><span class="line"><span class="built_in">png_init_io</span>(png_ptr, fp);</span><br><span class="line"><span class="built_in">png_set_IHDR</span>(png_ptr, info_ptr,</span><br><span class="line">	png_data-&gt;<span class="built_in">Width</span>(), png_data-&gt;<span class="built_in">Height</span>(), png_data-&gt;<span class="built_in">BitDepth</span>(), </span><br><span class="line">	png_data-&gt;<span class="built_in">ColorType</span>(),</span><br><span class="line">	PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);</span><br><span class="line"><span class="built_in">png_write_info</span>(png_ptr, info_ptr);</span><br><span class="line"><span class="comment">// 先写入图像基本信息</span></span><br></pre></td></tr></table></figure>
+<p>按行写入图像的某个图像行,这个是按顺序的，调用一次，下一次写的行数+1。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">png_write_row(png_ptr, row_ptr);</span><br></pre></td></tr></table></figure>
       
     </div>
 
