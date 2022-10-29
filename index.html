@@ -167,6 +167,68 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/29/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E4%B8%80%E4%BA%9Bgrpc%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dxyinme">
+      <meta itemprop="description" content="可怜人的自我救赎">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dxy的耻辱柱">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/10/29/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E4%B8%80%E4%BA%9Bgrpc%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="post-title-link" itemprop="url">一些grpc相关的注意事项</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-10-29 10:00:01 / 修改时间：10:00:28" itemprop="dateCreated datePublished" datetime="2022-10-29T10:00:01+08:00">2022-10-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近闲来无事，想要搞一个个人的cpp开发脚手架，项目地址在<a target="_blank" rel="noopener" href="https://github.com/dxyinme/ezlib">这里</a>，欢迎大家参与。<br>在这个项目里面我遇到了一些跟grpc相关的问题，刚好想要总结一下，就写写个blog记录一下好了。</p>
+<h1 id="http-https-proxy"><a href="#http-https-proxy" class="headerlink" title="http/https-proxy"></a>http/https-proxy</h1><p>如果你的机器开着代理，请务必给grpc使用的host配置NO_PROXY，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO_PROXY=localhost,127.0.0.0/8,::1,grpc.test.com</span><br></pre></td></tr></table></figure>
+<p>否则可能会出现发包或者回包失败的情况。当然这也有可能是我的代理的问题</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/24/%E7%AE%97%E6%B3%95%E9%A2%98/%E7%BB%83%E6%89%8B-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1079,121 +1141,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/12/%E6%96%87/%E4%B8%80%E8%88%AC%E8%B7%AF%E8%BF%87%E7%9A%84%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dxyinme">
-      <meta itemprop="description" content="可怜人的自我救赎">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dxy的耻辱柱">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/12/%E6%96%87/%E4%B8%80%E8%88%AC%E8%B7%AF%E8%BF%87%E7%9A%84%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B/" class="post-title-link" itemprop="url">一般路过的睡前故事</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-12 10:59:13" itemprop="dateCreated datePublished" datetime="2020-09-12T10:59:13+08:00">2020-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-15 20:13:47" itemprop="dateModified" datetime="2021-08-15T20:13:47+08:00">2021-08-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3>一般路过的睡前故事</h3>
-这里基本上是一些独立的小故事，希望大家能够喜欢 O_O
-
-
-
-<p><strong>-</strong></p>
-<pre><code>乙醚麻醉的冰冷
-一切事物，快速地转变
-如熔烧般的胃袋里
-若这些都是谎言的话
-就如同做了个紧勒住你脖子的梦
-光明流泄的午后
-用泫然欲泣的双眼
-看著你纤细的颈子颤抖的模样，而在那同时
-彷佛一切都得到了谅解。
-</code></pre>
-<p><strong>-</strong></p>
-<pre><code>“你这就离开了吧？”
-“.......”
-“再也不会回来，再也不会见到我了是吧？”
-带着哭腔的、颤抖着的声音让周围的空气都变得沉重起来。
-“你要去遥远的地方追寻你的梦想，然后把我抛下再也不会来了是吧？”
-没有回答。
-“呐，你等我一段时间，我很快就去找你。”女孩擦干了自己的眼泪。突兀的微笑与周围的气氛格格不入。若不是眼前毫无生气的垂下的身体。这也许是一幅唯美的画呢。
-</code></pre>
-<p><strong>-</strong></p>
-<pre><code>当他从遥远的西北被押解回来的时候，振振有词地骂着当权者没有一丝怜悯，却不知道在数以万计鲜活的生命死在他手上之后，现在的一切都是罪有应得。
-</code></pre>
-<p><strong>-</strong></p>
-<pre><code>窗外的雨一直下着。
-大概，是这样的吧，对于我来说雨点拍打玻璃和预制板的声音再也熟悉不过了。
-“是这样的吧。”
-整个天空都染上了一种诡异的暗红，从很远的地平线上开始浸润整个天空的红光。
-“是黄昏吗？”
-“不，是黎明。”
-墙上的挂钟指向凌晨两点。
-</code></pre>
-<p><strong>-</strong></p>
-<pre><code>慢慢上浮......
-追逐着光与影，离开冰冷的深海。
-穿过湍急的暗流。
-扭动着庞大的身躯，上一次被鱼叉刺伤的伤口历历在目。
-慢慢上浮......
-那道光闪烁了一下。
-它上浮的速度变得更快了。
-又一道光闪过，伴随着轻微的摩擦声。
-“上一次来到水面是什么时候呢？”
-几个天，甚至数月，甚至以年为计罢。
-鱼叉从身边穿过，它转了个身。
-慢慢下沉......
-</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1263,7 +1210,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
