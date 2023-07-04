@@ -257,7 +257,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-04 22:40:53" itemprop="dateModified" datetime="2023-03-04T22:40:53+08:00">2023-03-04</time>
+                <time title="修改时间：2023-07-04 19:00:09" itemprop="dateModified" datetime="2023-07-04T19:00:09+08:00">2023-07-04</time>
               </span>
 
           
@@ -271,8 +271,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近闲来无事，想要搞一个个人的cpp开发脚手架，项目地址在<a target="_blank" rel="noopener" href="https://github.com/dxyinme/ezlib">这里</a>，欢迎大家参与。<br>在这个项目里面我遇到了一些跟grpc相关的问题，刚好想要总结一下，就写写个blog记录一下好了。</p>
-<h1 id="http-https-proxy"><a href="#http-https-proxy" class="headerlink" title="http/https-proxy"></a>http/https-proxy</h1><p>如果你的机器开着代理，请务必给grpc使用的host配置NO_PROXY，如下：</p>
+          <h1 id="http-https-proxy"><a href="#http-https-proxy" class="headerlink" title="http/https-proxy"></a>http/https-proxy</h1><p>如果你的机器开着代理，请务必给grpc使用的host配置NO_PROXY，如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO_PROXY=localhost,127.0.0.0/8,::1,grpc.test.com</span><br></pre></td></tr></table></figure>
 <p>否则可能会出现发包或者回包失败的情况。当然这也有可能是我的代理的问题</p>
 <h1 id="go-grpc"><a href="#go-grpc" class="headerlink" title="go-grpc"></a>go-grpc</h1><p>在golang项目下可能会出现生成的pb文件package或者位置不对的问题，现在一般推荐使用gowork，让整个项目变得更bazel化之后，<br>使用protoc就会方便很多。</p>
@@ -343,6 +342,86 @@
 <h2 id="牛牛的数列"><a href="#牛牛的数列" class="headerlink" title="牛牛的数列"></a>牛牛的数列</h2><p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/13134">来源</a><br><a href="/download/code/algo/dp/%E7%89%9B%E7%89%9B%E7%9A%84%E6%95%B0%E5%88%97-acnowcoder-13134.cpp">代码</a></p>
 <h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>序列DP,题目描述不清楚，记住是<strong>连续</strong>子序列，就是子串，刚开始按照不连续的去做了。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f[i][<span class="number">0</span>] 表示 以 i 结尾的最长子串</span><br><span class="line">f[i][<span class="number">1</span>] 表示 以 i 开头的最长子串</span><br><span class="line">然后枚举 i , 判断是否可以有中间值</span><br><span class="line">注意边界条件（i做新子串的开头 <span class="keyword">or</span> 结尾）</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/04/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dxyinme">
+      <meta itemprop="description" content="可怜人的自我救赎">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dxy的耻辱柱">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/04/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">前端学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-04 19:06:33" itemprop="dateCreated datePublished" datetime="2022-07-04T19:06:33+08:00">2022-07-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-04 19:08:04" itemprop="dateModified" datetime="2023-07-04T19:08:04+08:00">2023-07-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>最近由于个人原因需要进行一些前端页面的开发，所以就对一些前端框架进行了调研。我本来想继续用之前的layui一把梭直接搞的，但是想想还是应该接触一些新东西，所以就以react框架来作为我前端开发的一小步吧。</p>
+<h1 id="如何入门"><a href="#如何入门" class="headerlink" title="如何入门"></a>如何入门</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>可以直接看官网的这个，很简单</p>
+<p><a target="_blank" rel="noopener" href="https://react.docschina.org/tutorial/tutorial.html#setup-option-2-local-development-environment">https://react.docschina.org/tutorial/tutorial.html#setup-option-2-local-development-environment</a></p>
+<h1 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h1><h2 id="如何开发多页面"><a href="#如何开发多页面" class="headerlink" title="如何开发多页面"></a>如何开发多页面</h2><p>在App.js内，你可以声明一个RouteWarp组建，然后组建内部用下面的形式来返回不同的子页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; BrowserRouter <span class="keyword">as</span> Router, Route, Switch &#125; <span class="keyword">from</span> <span class="string">&#x27;react-router-dom&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RouterWrap</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">props</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;router&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">component</span>=<span class="string">&#123;homepage&#125;</span> <span class="attr">exact</span> /&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/page1&quot;</span> <span class="attr">component</span>=<span class="string">&#123;page1&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/page2&quot;</span> <span class="attr">component</span>=<span class="string">&#123;page2&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/page3&quot;</span> <span class="attr">component</span>=<span class="string">&#123;page3&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的path对应的就是子页面的路径，component对应的就是这个页面的子组件</p>
+<p>然后需要使用这个router的时候，就需要在App这个组件里面包含RouterWrap这个组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">props</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">RouterWrap</span>&gt;</span><span class="tag">&lt;/<span class="name">RouterWrap</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后对应的实现各个组件就可以进行子页面开发啦。</p>
+<h2 id="打包出问题"><a href="#打包出问题" class="headerlink" title="打包出问题"></a>打包出问题</h2><p>用脚手架生成的打包命令是<code>npm run build</code>，但是如果你的代码里面的import有通过相对路径进行引入的，就需要改一下脚手架生成的package.json</p>
+<p><strong>加上”homepage”:”./“那一行</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;233333&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.0.1&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;@testing-library/jest-dom&quot;</span>: <span class="string">&quot;^5.16.5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@testing-library/react&quot;</span>: <span class="string">&quot;^13.3.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@testing-library/user-event&quot;</span>: <span class="string">&quot;^13.5.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;axios&quot;</span>: <span class="string">&quot;^0.27.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;mockjs&quot;</span>: <span class="string">&quot;^1.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react&quot;</span>: <span class="string">&quot;^18.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-cookies&quot;</span>: <span class="string">&quot;^0.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-dom&quot;</span>: <span class="string">&quot;^18.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-router-dom&quot;</span>: <span class="string">&quot;^5.3.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;react-scripts&quot;</span>: <span class="string">&quot;5.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tdesign-react&quot;</span>: <span class="string">&quot;^0.40.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;web-vitals&quot;</span>: <span class="string">&quot;^2.1.4&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;react-scripts start&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;react-scripts build&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;react-scripts test&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;eject&quot;</span>: <span class="string">&quot;react-scripts eject&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;eslintConfig&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;extends&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;react-app&quot;</span>,</span><br><span class="line">      <span class="string">&quot;react-app/jest&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;browserslist&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;production&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&gt;0.2%&quot;</span>,</span><br><span class="line">      <span class="string">&quot;not dead&quot;</span>,</span><br><span class="line">      <span class="string">&quot;not op_mini all&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;development&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;last 1 chrome version&quot;</span>,</span><br><span class="line">      <span class="string">&quot;last 1 firefox version&quot;</span>,</span><br><span class="line">      <span class="string">&quot;last 1 safari version&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="改变state"><a href="#改变state" class="headerlink" title="改变state"></a>改变state</h2><p>改变state的时候要用setState函数操作变量，而不是直接对绑定的变量进行操作</p>
+<p>详情可见：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/react/react-state.html">https://www.runoob.com/react/react-state.html</a></p>
+<h1 id="一些关键字"><a href="#一些关键字" class="headerlink" title="一些关键字"></a>一些关键字</h1><p>重定向页面 <code>window.location.replace(XXXX)</code></p>
+
       
     </div>
 
@@ -912,139 +991,6 @@
 “但是今天的你，和那天一样。”
 </code></pre>
 <p><img src="https://dxyinme.github.io/images/stand.jpg" alt="arvatar"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/12/%E6%96%87/%E5%BA%9F%E5%BC%83%E9%83%BD%E5%B8%82%E7%95%AA%E5%A4%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dxyinme">
-      <meta itemprop="description" content="可怜人的自我救赎">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dxy的耻辱柱">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/12/%E6%96%87/%E5%BA%9F%E5%BC%83%E9%83%BD%E5%B8%82%E7%95%AA%E5%A4%96/" class="post-title-link" itemprop="url">废弃都市番外</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-12 15:16:14" itemprop="dateCreated datePublished" datetime="2020-09-12T15:16:14+08:00">2020-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-05 18:22:39" itemprop="dateModified" datetime="2022-05-05T18:22:39+08:00">2022-05-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3>废弃都市番外</h3>
-发生在废弃都市的番外故事，希望大家喜欢。
-
-
-<p><strong>1</strong></p>
-<pre><code>“这里......好冷.......”
-他们说这家医院有一种让人说不出的阴森感，空无一人的招待台，不知道多久前的X光片，都映衬着凋零的气息。
-“能帮我找个镜子来吗？我想看看手术后恢复的怎么样。”，她轻轻地说，惨白的病号服和脸上的绷带后面的棕色瞳孔形成鲜明的对比。
-......
-“给。”
-她接过镜子，慢慢解开绷带。
-“啊，恢复的还不错。”
-“这位先生，”，她继续端详着镜子里的自己，“你会有好运气的。”
-苍白的脸上带着一丝笑容。
-只是这个笑容，在镜子里看不见。
-</code></pre>
-<p><strong>2</strong></p>
-<pre><code>在后街的下水道旁，有一个穿着破旧运动服的胡子拉碴的男人。
-如果不仔细观察的话，可能会觉得他是个流浪汉。但他其实在我刚到这个城市的时候帮助了我很多。
-在找到一份糊口的工作之后，我多次想要报答他，却都被他拒绝了。
-这天我经过他面前的时候，照例问他是否要一起去吃一顿。他忽然站了起来。
-“如果你真的想帮我的话。”，他缓缓地说，“那就把这束花送给医院前的那个女人吧。”
-说罢，他从身后掏出一束玫瑰。
-我点点头，拿上玫瑰走了。虽然那个阴森的医院给人的感觉不大好，但如果是他的嘱托，我还是很乐意去做的。
-“这是吉姆托我给你带的玫瑰。”，我将玫瑰放到少女的手上。
-她没有说什么，只是低头静静地看着。
-“谢谢你。”
-今天是情人节，我走在回家的路上，远处的晚霞宣告着明日的艳阳天。
-在这个城市里，很多人在为了这平静的日常默默付出。
-“观察者的日子可真难过。”，我轻轻地说。
-</code></pre>
-<p><strong>3</strong></p>
-<pre><code>空无一人的车厢。
-已经不知道这个地铁的建造时间要推到多少年前了，不过它锈迹斑驳的扶手和昏暗的灯光也告诉着大家它的年龄不小。
-玻璃和车厢壁上都是暗色的污渍，为此我还仔细跟管理员讲过这事情，但懒散的他估计也不会认真去管我这种新面孔的要求吧。
-“前方到站是----B1站”
-这报站铃的声音倒是还挺大。
-门吱吱嘎嘎的开了，走上来了一个披着风衣的瘦小身影。坐在门斜对面的我，貌似看见门的站台有什么东西在飘动着。
-“你身边有人吗？”，是个很轻的女声，我仿佛在哪儿听到过。
-“没有，坐这吧。”
-她身上的风衣明显不合身，而且很新，却带着腐朽的气味。她将手上的袋子放在腿上，里面是一些药和本子之类的东西。
-“吃一个糖吧。”，她从风衣口袋里摸出一个水果软糖递给我。
-我接过来，把糖塞进口袋里。她全程偏着头看着，也没有说什么。垂下的头发遮住了她的脸颊。我忽然想起来了，她是在医院里的那个女人。
-“你知道吗，上次你给我的镜子，我还一直带在身边喔。”，她默默地说，“上次不小心吓坏你了吧，但是没有办法，这个病就是这样，你看我不是来复查了嘛。”
-脱下帽子的她努力向我挤出一个阳光的笑容。
-“前方到站是----城中站。”
-“我要下车了，下次再见。”，我跟身边的女人挥了挥手，走出了车厢。
-此时的站台上站着许多人，杂乱无章的脚步声渐渐盖住了这个城市的黄昏。
-“我也是这里下。”，柔弱却具有穿透力的声音从身后传来，“先生，你走的太急了，这是你的工作证。”
-我急忙接过工作证向她道谢。
-“是医院边上那家呢，我一会儿会过去照顾生意的哟。”，她笑着说。
-“以后还有机会见到你吗？”
-“有机会的喔，我会常来城里。”
-听到这里，曾经的恐惧和不安已经消失，逆着人群前行的两人也渐渐熟悉了起来。
-</code></pre>
-<p><strong>4</strong></p>
-<pre><code>如果说有什么不合时宜的事情，那估计就是开春之后的大雨吧。周围行人廖廖，时不时有人顶着包匆匆跑过。
-“我曾经很喜欢雨天的。”，我在心里咒骂到，“现在这种天气可真见鬼。”
-但是无论如何都动弹不得，手臂上的伤口，外衣被雨水浸透，头也一阵一阵地疼。
-“起来吧，拉着我。”
-用比周遭环境要阴沉十倍的声音说出关心的话，还真只有这个人能做到。
-我忽然想笑一笑来展现我的感谢，但是稍微活动一下面部肌肉就伴随着难忍的酸痛。
-迟疑间，她抓住了我的手，一把把我拉了起来。
-冰冷的手，但却充满温暖。
-可能某种程度上，我还是喜欢雨天的吧。
-</code></pre>
-<p><img src="https://dxyinme.github.io/images/hand_in_rain.jpg" alt="arvatar"></p>
-<p><strong>5</strong><br>    “啊，有些事情忘掉了。”，坐在去往火车站的地铁上，我忽然发出了这样的感慨。<br>    “算了吧，其实也跟我没什么太大关系，”<br>    “或者说，总要跟我扯不上关系的。”<br>    窗外漆黑一片，从斑驳的玻璃上仿佛可以清晰地看见自己的面容，<br>    “如果没有额头上缠着的纱布，也许就能完美融入周围的人了吧。”我这样想着。<br>    “前方到站，B1站”<br>    熟悉的报站声音响起。<br>    “前段时间他们修好了地铁的报站广播，现在没有以前那么刺耳了……”<br>    “就是就是，好好翻新一下地铁还是挺好的嘛……”<br>    “你们以前那么讨厌地铁，现在反倒还喜欢起来了……”<br>    几句清脆的评论也算是对老地铁翻新工作做出的肯定吧。<br>    轻快的脚步声停止在我的面前。<br>    “熟悉的声音。”，我咕哝着。<br>    “这位先生，你要离开这里了是吗？”<br>    这么有朝气的声音，几个月前你可还是个病号啊。我努力把自己的吐槽压回肚子里，“是的。”<br>    “那好，祝你一切顺利。还有，”，她说，<br>    “谢谢你。”<br>    “前方到站，火车站。”<br>    我提上沉重的行李走下了地铁。<br>    她对我笑着，就仿佛我没有离开一样。</p>
-<p><img src="https://dxyinme.github.io/images/lovely.jpg" alt="arvatar"></p>
 
       
     </div>
